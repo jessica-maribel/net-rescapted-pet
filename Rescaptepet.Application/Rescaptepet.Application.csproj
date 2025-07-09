@@ -1,0 +1,14 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Rescaptepet.Domain\Rescaptepet.Domain.csproj" />
+    <ProjectReference Include="..\Rescaptepet.Infraestructure\Rescaptepet.Infraestructure.csproj" />
+  </ItemGroup>
+
+</Project>

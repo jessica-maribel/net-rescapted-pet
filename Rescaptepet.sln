@@ -1,0 +1,52 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.9.34622.214
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Rescaptepet.Infraestructure", "Rescaptepet.Infraestructure\Rescaptepet.Infraestructure.csproj", "{62C6EEA7-18C6-448C-9A1A-BF0AFDB2CA53}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Rescaptepet.Domain", "Rescaptepet.Domain\Rescaptepet.Domain.csproj", "{C2849DB5-C464-4369-A713-11FCC0D9C33A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Rescaptepet.Exceptions", "Rescaptepet.Exceptions\Rescaptepet.Exceptions.csproj", "{D184E51F-96C9-4AB0-BD83-2CBEE3021E37}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Rescaptepet.Application", "Rescaptepet.Application\Rescaptepet.Application.csproj", "{2AE3D38C-1A8D-45E4-8291-D1048A336A3A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Rescaptepet.API", "Rescaptepet.API\Rescaptepet.API.csproj", "{6B7E9B9A-5D82-4D9C-A14F-C0C58E0310B3}"
+	ProjectSection(ProjectDependencies) = postProject
+		{D184E51F-96C9-4AB0-BD83-2CBEE3021E37} = {D184E51F-96C9-4AB0-BD83-2CBEE3021E37}
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{62C6EEA7-18C6-448C-9A1A-BF0AFDB2CA53}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{62C6EEA7-18C6-448C-9A1A-BF0AFDB2CA53}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{62C6EEA7-18C6-448C-9A1A-BF0AFDB2CA53}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{62C6EEA7-18C6-448C-9A1A-BF0AFDB2CA53}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C2849DB5-C464-4369-A713-11FCC0D9C33A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C2849DB5-C464-4369-A713-11FCC0D9C33A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C2849DB5-C464-4369-A713-11FCC0D9C33A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C2849DB5-C464-4369-A713-11FCC0D9C33A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D184E51F-96C9-4AB0-BD83-2CBEE3021E37}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D184E51F-96C9-4AB0-BD83-2CBEE3021E37}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D184E51F-96C9-4AB0-BD83-2CBEE3021E37}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D184E51F-96C9-4AB0-BD83-2CBEE3021E37}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2AE3D38C-1A8D-45E4-8291-D1048A336A3A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2AE3D38C-1A8D-45E4-8291-D1048A336A3A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2AE3D38C-1A8D-45E4-8291-D1048A336A3A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2AE3D38C-1A8D-45E4-8291-D1048A336A3A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6B7E9B9A-5D82-4D9C-A14F-C0C58E0310B3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6B7E9B9A-5D82-4D9C-A14F-C0C58E0310B3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6B7E9B9A-5D82-4D9C-A14F-C0C58E0310B3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6B7E9B9A-5D82-4D9C-A14F-C0C58E0310B3}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {C65C30A5-2116-4ED2-BF4D-6891879B1741}
+	EndGlobalSection
+EndGlobal

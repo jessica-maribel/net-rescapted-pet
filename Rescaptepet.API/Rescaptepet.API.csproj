@@ -1,0 +1,17 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+	  <OutputType>Exe</OutputType>
+    <TargetFramework>net8.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+      
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Rescaptepet.Application\Rescaptepet.Application.csproj" />
+    <ProjectReference Include="..\Rescaptepet.Domain\Rescaptepet.Domain.csproj" />
+    <ProjectReference Include="..\Rescaptepet.Infraestructure\Rescaptepet.Infraestructure.csproj" />
+  </ItemGroup>
+
+</Project>

@@ -1,0 +1,21 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+	<ItemGroup>
+		<PackageReference Include="Dapper" Version="2.1.66" />
+		<PackageReference Include="Microsoft.EntityFrameworkCore" Version="8.0.18" />
+		<PackageReference Include="Microsoft.Extensions.Configuration.Abstractions" Version="9.0.7" />
+		<PackageReference Include="MySqlConnector" Version="2.4.0" />
+		<PackageReference Include="Pomelo.EntityFrameworkCore.MySql" Version="8.0.3" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<ProjectReference Include="..\Rescaptepet.Domain\Rescaptepet.Domain.csproj" />
+		<ProjectReference Include="..\Rescaptepet.Exceptions\Rescaptepet.Exceptions.csproj" />
+	</ItemGroup>
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+</Project>
