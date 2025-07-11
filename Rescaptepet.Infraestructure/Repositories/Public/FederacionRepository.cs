@@ -10,7 +10,7 @@ namespace Rescaptepet.Infraestructure.Repositories.Public
     {
         public async Task<Federacione> AddAsync(Federacione federacione)
         {
-            await _context.Federaciones.AddAsync(federacione); ;
+            await _context.Federaciones.AddAsync(federacione);
             await _context.SaveChangesAsync();
             return federacione;
         }

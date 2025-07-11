@@ -361,7 +361,10 @@ public partial class MySqlDbContext : DbContext
             entity.ToTable("usuarios");
 
             entity.HasIndex(e => e.IdRol, "id_rol");
-
+            entity.Property(e => e.Activo)
+                    .IsRequired()
+                    .HasDefaultValueSql("'1'")
+                    .HasColumnName("activo");
             entity.Property(e => e.IdUsuario).HasColumnName("id_usuario");
             entity.Property(e => e.Contrasena)
                 .HasMaxLength(255)

@@ -26,10 +26,13 @@ builder.Services.AddDbContext<MySqlDbContext>(options =>
 builder.Services.AddScoped<IAnimalRepository, AnimalRepository>();
 builder.Services.AddScoped<IAdopcionRepository, AdopcionRepository>();
 builder.Services.AddScoped<IFederacionRepository, FederacionRepository>();
+builder.Services.AddScoped<IUsuarioRepository, UsuarioRepository>();
+
 // Add build services
 builder.Services.AddScoped<IAnimalService, AnimalService>();
 builder.Services.AddScoped<IAdopcionService, AdopcionService>();
 builder.Services.AddScoped<IFederacionService, FederacionService>();
+builder.Services.AddScoped<IUsuarioService, UsuarioService>();
 
 //builder.Services.AddScoped<MysqlContext>();
 

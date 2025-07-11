@@ -19,6 +19,7 @@ public partial class Usuario
 
     public int? IdRol { get; set; }
 
+    public bool? Activo { get; set; }
     public virtual ICollection<Adopcione> Adopciones { get; set; } = new List<Adopcione>();
 
     public virtual Role? IdRolNavigation { get; set; }

@@ -1,8 +1,8 @@
 ﻿using Rescaptepet.Domain.Entities.Public;
 
-namespace Rescaptepet.Application.Interfaces.Public
+namespace Rescaptepet.Domain.Interfaces.Public
 {
-    public interface IUsuarioService
+    public interface IUsuarioRepository
     {
         Task<IEnumerable<Usuario>> GetAllAsync();
         Task<Usuario?> GetByIdAsync(int id);
