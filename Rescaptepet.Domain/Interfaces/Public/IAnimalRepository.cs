@@ -1,9 +1,4 @@
 ﻿using Rescaptepet.Domain.Entities.Public;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Rescaptepet.Domain.Interfaces.Public
 {

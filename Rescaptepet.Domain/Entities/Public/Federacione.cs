@@ -17,5 +17,7 @@ public partial class Federacione
 
     public string? Responsable { get; set; }
 
+    public bool? Activo { get; set; }
+
     public virtual ICollection<AnimalFederacion> AnimalFederacions { get; set; } = new List<AnimalFederacion>();
 }

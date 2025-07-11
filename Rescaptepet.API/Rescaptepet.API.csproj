@@ -9,6 +9,10 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="Swashbuckle.AspNetCore" Version="6.6.2" />
+  </ItemGroup>
+
+  <ItemGroup>
     <ProjectReference Include="..\Rescaptepet.Application\Rescaptepet.Application.csproj" />
     <ProjectReference Include="..\Rescaptepet.Domain\Rescaptepet.Domain.csproj" />
     <ProjectReference Include="..\Rescaptepet.Infraestructure\Rescaptepet.Infraestructure.csproj" />

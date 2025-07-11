@@ -109,6 +109,10 @@ public partial class MySqlDbContext : DbContext
             entity.HasIndex(e => e.IdTipoAnimal, "id_tipo_animal");
 
             entity.Property(e => e.IdAnimal).HasColumnName("id_animal");
+            entity.Property(e => e.Activo)
+                .IsRequired()
+                .HasDefaultValueSql("'1'")
+                .HasColumnName("activo");
             entity.Property(e => e.Color)
                 .HasMaxLength(50)
                 .HasColumnName("color");
@@ -148,6 +152,10 @@ public partial class MySqlDbContext : DbContext
             entity.ToTable("federaciones");
 
             entity.Property(e => e.IdFederacion).HasColumnName("id_federacion");
+            entity.Property(e => e.Activo)
+                .IsRequired()
+                .HasDefaultValueSql("'1'")
+                .HasColumnName("activo");
             entity.Property(e => e.Correo)
                 .HasMaxLength(100)
                 .HasColumnName("correo");

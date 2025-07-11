@@ -27,7 +27,7 @@ namespace Rescaptepet.Application.Services.Public
 
         public Task<Animale?> UpdateAsync(Animale animal)
         {
-            throw new NotImplementedException();
+            return _animalRepository.UpdateAsync(animal);
         }
     }
 }

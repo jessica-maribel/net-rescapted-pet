@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Text.Json.Serialization;
 
 namespace Rescaptepet.Domain.Entities.Public;
@@ -28,12 +27,13 @@ public partial class Animale
 
     public int? IdTipoAnimal { get; set; }
 
+    public bool? Activo { get; set; }
+
     public virtual ICollection<Adopcione> Adopciones { get; set; } = new List<Adopcione>();
     [JsonIgnore]
     public virtual ICollection<AnimalFederacion> AnimalFederacions { get; set; } = new List<AnimalFederacion>();
     [JsonIgnore]
     public virtual ICollection<HistorialMedico> HistorialMedicos { get; set; } = new List<HistorialMedico>();
-    [JsonIgnore]
     public virtual TipoAnimal? IdTipoAnimalNavigation { get; set; }
     [JsonIgnore]
     public virtual ICollection<Padrino> Padrinos { get; set; } = new List<Padrino>();

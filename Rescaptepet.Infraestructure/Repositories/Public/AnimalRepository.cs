@@ -9,12 +9,19 @@ public class AnimalRepository(MySqlDbContext _context) : IAnimalRepository
 {
     public async Task<IEnumerable<Animale>> GetAllAsync()
     {
-        return await _context.Animales.ToListAsync();
+        return await _context.Animales
+            .AsNoTracking()
+            .Include(a => a.IdTipoAnimalNavigation)
+            .Include(a => a.Adopciones)
+            .ToListAsync();
     }
 
     public async Task<Animale?> GetByIdAsync(int id)
     {
-        return await _context.Animales.FindAsync(id);
+        return await _context.Animales
+            .AsNoTracking()
+            .Include(a => a.IdTipoAnimalNavigation)//add include adopciones
+            .FirstOrDefaultAsync(a=> a.IdAnimal == id);
     }
 
     public async Task<Animale> AddAsync(Animale animal)
