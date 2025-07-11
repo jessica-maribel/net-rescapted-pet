@@ -47,7 +47,7 @@ namespace Rescaptepet.API.Controllers.V1
             Federacione entity = new()
             {
                 Activo = federacione.Activo,
-                IdFederacion = federacione.IdFederacion
+                IdFederacion = id
             };
             return Ok(await _federacionService.ChangeStateAsync(entity));
         }

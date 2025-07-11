@@ -3,6 +3,7 @@ using Rescaptepet.Application.Interfaces.Public;
 using Rescaptepet.Application.Services.Public;
 using Rescaptepet.Domain.Interfaces.Public;
 using Rescaptepet.Infraestructure.Connections;
+using Rescaptepet.Infraestructure.Repositories.Public;
 using Rescaptepet.Infraestrucutre.DbContext;
 using Rescaptepet.Infraestrucutre.Repositories.Public;
 
@@ -23,9 +24,12 @@ builder.Services.AddDbContext<MySqlDbContext>(options =>
 
 // Add services to the container.
 builder.Services.AddScoped<IAnimalRepository, AnimalRepository>();
-
+builder.Services.AddScoped<IAdopcionRepository, AdopcionRepository>();
+builder.Services.AddScoped<IFederacionRepository, FederacionRepository>();
 // Add build services
 builder.Services.AddScoped<IAnimalService, AnimalService>();
+builder.Services.AddScoped<IAdopcionService, AdopcionService>();
+builder.Services.AddScoped<IFederacionService, FederacionService>();
 
 //builder.Services.AddScoped<MysqlContext>();
 

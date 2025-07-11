@@ -17,8 +17,11 @@ namespace Rescaptepet.Infraestructure.Repositories.Public
 
         public async Task<Federacione> ChangeStateAsync(Federacione federacione)
         {
-            Federacione finded = await _context.Federaciones.FirstAsync(c => c.IdFederacion == federacione.IdFederacion);
-            finded.Activo = finded.Activo;
+            Federacione finded = await _context.Federaciones
+                .FirstAsync(c => c.IdFederacion == federacione.IdFederacion);
+
+            finded.Activo = federacione.Activo;
+
             await _context.SaveChangesAsync();
             return finded;
         }

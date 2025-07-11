@@ -1,11 +1,11 @@
 ﻿
 using Rescaptepet.Application.Interfaces.Public;
 using Rescaptepet.Domain.Entities.Public;
-using Rescaptepet.Infraestructure.Repositories.Public;
+using Rescaptepet.Domain.Interfaces.Public;
 
 namespace Rescaptepet.Application.Services.Public
 {
-    public class AdopcionService(AdopcionRepository _adopcionRepository) : IAdopcionService
+    public class AdopcionService(IAdopcionRepository _adopcionRepository) : IAdopcionService
     {
         public Task<Adopcione> AddAsync(Adopcione adopcion)
         {
