@@ -22,5 +22,11 @@ namespace Rescaptepet.API.Controllers.V1
             return NoContent();
         }
 
+        [HttpGet("get-all")]
+        public async Task<ActionResult<IEnumerable<Usuario>>> GetAll()
+        {
+            return Ok(await _usuarioService.GetAllAsync());
+        }
+
     }
 }

@@ -29,6 +29,8 @@ namespace Rescaptepet.Infraestructure.Repositories.Public
         {
             return await _context.Usuarios
                 .AsNoTracking()
+                .Include(u => u.IdRolNavigation)
+                    .ThenInclude(r => r.IdPermisos)
                 .ToListAsync();
         }
 

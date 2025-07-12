@@ -3,15 +3,15 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.9.34622.214
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Rescaptepet.Infraestructure", "Rescaptepet.Infraestructure\Rescaptepet.Infraestructure.csproj", "{62C6EEA7-18C6-448C-9A1A-BF0AFDB2CA53}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Rescaptepet.Infraestructure", "Rescaptepet.Infraestructure\Rescaptepet.Infraestructure.csproj", "{62C6EEA7-18C6-448C-9A1A-BF0AFDB2CA53}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Rescaptepet.Domain", "Rescaptepet.Domain\Rescaptepet.Domain.csproj", "{C2849DB5-C464-4369-A713-11FCC0D9C33A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Rescaptepet.Domain", "Rescaptepet.Domain\Rescaptepet.Domain.csproj", "{C2849DB5-C464-4369-A713-11FCC0D9C33A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Rescaptepet.Exceptions", "Rescaptepet.Exceptions\Rescaptepet.Exceptions.csproj", "{D184E51F-96C9-4AB0-BD83-2CBEE3021E37}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Rescaptepet.Exceptions", "Rescaptepet.Exceptions\Rescaptepet.Exceptions.csproj", "{D184E51F-96C9-4AB0-BD83-2CBEE3021E37}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Rescaptepet.Application", "Rescaptepet.Application\Rescaptepet.Application.csproj", "{2AE3D38C-1A8D-45E4-8291-D1048A336A3A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Rescaptepet.Application", "Rescaptepet.Application\Rescaptepet.Application.csproj", "{2AE3D38C-1A8D-45E4-8291-D1048A336A3A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Rescaptepet.API", "Rescaptepet.API\Rescaptepet.API.csproj", "{6B7E9B9A-5D82-4D9C-A14F-C0C58E0310B3}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Rescaptepet.API", "Rescaptepet.API\Rescaptepet.API.csproj", "{6B7E9B9A-5D82-4D9C-A14F-C0C58E0310B3}"
 	ProjectSection(ProjectDependencies) = postProject
 		{D184E51F-96C9-4AB0-BD83-2CBEE3021E37} = {D184E51F-96C9-4AB0-BD83-2CBEE3021E37}
 	EndProjectSection

@@ -24,6 +24,7 @@ builder.Services.AddDbContext<MySqlDbContext>(options =>
 
 // Add services to the container.
 builder.Services.AddScoped<IAnimalRepository, AnimalRepository>();
+builder.Services.AddScoped<IAuthService, AuthService>();
 builder.Services.AddScoped<IAdopcionRepository, AdopcionRepository>();
 builder.Services.AddScoped<IFederacionRepository, FederacionRepository>();
 builder.Services.AddScoped<IUsuarioRepository, UsuarioRepository>();

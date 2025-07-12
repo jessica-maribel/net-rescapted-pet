@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Text.Json.Serialization;
 
 namespace Rescaptepet.Domain.Entities.Public;
 
@@ -21,7 +22,7 @@ public partial class Usuario
 
     public bool? Activo { get; set; }
     public virtual ICollection<Adopcione> Adopciones { get; set; } = new List<Adopcione>();
-
+    
     public virtual Role? IdRolNavigation { get; set; }
 
     public virtual ICollection<Padrino> Padrinos { get; set; } = new List<Padrino>();
