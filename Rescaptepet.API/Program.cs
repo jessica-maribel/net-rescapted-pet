@@ -28,12 +28,14 @@ builder.Services.AddScoped<IAuthService, AuthService>();
 builder.Services.AddScoped<IAdopcionRepository, AdopcionRepository>();
 builder.Services.AddScoped<IFederacionRepository, FederacionRepository>();
 builder.Services.AddScoped<IUsuarioRepository, UsuarioRepository>();
+builder.Services.AddScoped<IReporteRescateRepository, ReporteRescateRepository>();
 
 // Add build services
 builder.Services.AddScoped<IAnimalService, AnimalService>();
 builder.Services.AddScoped<IAdopcionService, AdopcionService>();
 builder.Services.AddScoped<IFederacionService, FederacionService>();
 builder.Services.AddScoped<IUsuarioService, UsuarioService>();
+builder.Services.AddScoped<IReporteRescateService, ReporteRescateService>();
 
 //builder.Services.AddScoped<MysqlContext>();
 
@@ -51,3 +53,4 @@ app.UseAuthorization();
 app.MapControllers();
 
 app.Run();
+

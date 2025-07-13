@@ -30,6 +30,7 @@ namespace Rescaptepet.Infraestructure.Repositories.Public
         {
             return await _context.Federaciones
                 .AsNoTracking()
+                .Where(f => f.Activo == true)
                 //.Include(f => f.AnimalFederacions)
                 .ToListAsync();
         }

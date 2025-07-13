@@ -27,5 +27,8 @@ public partial class Usuario
 
     public virtual ICollection<Padrino> Padrinos { get; set; } = new List<Padrino>();
 
+    public virtual ICollection<ReporteRescate> ReporteRescates { get; set; } = new List<ReporteRescate>();
+
+    [JsonIgnore]
     public virtual ICollection<TrazabilidadAnimal> TrazabilidadAnimals { get; set; } = new List<TrazabilidadAnimal>();
 }

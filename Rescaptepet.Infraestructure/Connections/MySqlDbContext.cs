@@ -27,6 +27,8 @@ public partial class MySqlDbContext : DbContext
 
     public virtual DbSet<ReportesMejora> ReportesMejoras { get; set; }
 
+    public virtual DbSet<ReporteRescate> ReporteRescates { get; set; }
+
     public virtual DbSet<Role> Roles { get; set; }
 
     public virtual DbSet<TipoAnimal> TipoAnimals { get; set; }
@@ -34,6 +36,7 @@ public partial class MySqlDbContext : DbContext
     public virtual DbSet<TrazabilidadAnimal> TrazabilidadAnimals { get; set; }
 
     public virtual DbSet<Usuario> Usuarios { get; set; }
+
 
 
     // Add the atributes and configurations
@@ -274,6 +277,46 @@ public partial class MySqlDbContext : DbContext
             entity.HasOne(d => d.IdAnimalNavigation).WithMany(p => p.ReportesMejoras)
                 .HasForeignKey(d => d.IdAnimal)
                 .HasConstraintName("reportes_mejora_ibfk_1");
+        });
+
+        modelBuilder.Entity<ReporteRescate>(entity =>
+        {
+            entity.HasKey(e => e.Id).HasName("PRIMARY");
+
+            entity.ToTable("reporte_rescates");
+
+            entity.HasIndex(e => e.IdUsuario, "reporte_rescates_usuarios_FK");
+
+            entity.Property(e => e.Id).HasColumnName("id");
+            entity.Property(e => e.Activo)
+                .IsRequired()
+                .HasDefaultValueSql("'1'")
+                .HasColumnName("activo");
+            entity.Property(e => e.Descripcion)
+                .HasMaxLength(200)
+                .HasColumnName("descripcion");
+            entity.Property(e => e.Estado)
+                .HasMaxLength(20)
+                .HasDefaultValueSql("'no validado'")
+                .HasColumnName("estado");
+            entity.Property(e => e.Fecha)
+                .HasColumnType("timestamp")
+                .HasColumnName("fecha");
+            entity.Property(e => e.Foto)
+                .HasMaxLength(100)
+                .HasColumnName("foto");
+            entity.Property(e => e.IdUsuario).HasColumnName("id_usuario");
+            entity.Property(e => e.Latitud)
+                .HasMaxLength(30)
+                .HasColumnName("latitud");
+            entity.Property(e => e.Longitud)
+                .HasMaxLength(30)
+                .HasColumnName("longitud");
+
+            entity.HasOne(d => d.IdUsuarioNavigation).WithMany(p => p.ReporteRescates)
+                .HasForeignKey(d => d.IdUsuario)
+                .OnDelete(DeleteBehavior.ClientSetNull)
+                .HasConstraintName("reporte_rescates_usuarios_FK");
         });
 
         modelBuilder.Entity<Role>(entity =>
