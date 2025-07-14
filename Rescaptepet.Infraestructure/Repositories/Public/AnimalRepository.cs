@@ -13,6 +13,7 @@ public class AnimalRepository(MySqlDbContext _context) : IAnimalRepository
             .AsNoTracking()
             .Include(a => a.IdTipoAnimalNavigation)
             .Include(a => a.Adopciones)
+            .Where(a => a.Activo == true)
             .ToListAsync();
     }
 
@@ -49,6 +50,16 @@ public class AnimalRepository(MySqlDbContext _context) : IAnimalRepository
         _context.Animales.Remove(animal);
         var deleted = await _context.SaveChangesAsync();
         return deleted > 0;
+    }
+
+    public async Task<IEnumerable<Animale>> GetAllByAdoption()
+    {
+        return await _context.Animales
+            .AsNoTracking()
+            .Include(a => a.IdTipoAnimalNavigation)
+            .Include(a => a.Adopciones)
+            .Where(a => a.Activo == true && a.EstadoAdopcion == "Disponible")
+            .ToListAsync();
     }
 }
 

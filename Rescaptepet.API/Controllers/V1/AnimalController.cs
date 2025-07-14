@@ -20,14 +20,14 @@ namespace Rescaptepet.API.Controllers.V1
         public async Task<ActionResult<Animale>> UpdateAsync(Animale animal, int id)
         {
             if (id != animal.IdAnimal)
-            
+
                 return BadRequest("Id no existe");
-            
+
             var updated = await _animalService.UpdateAsync(animal);
             if (updated == null)
-            
+
                 return NotFound();
-            
+
             return NoContent();
         }
 
@@ -46,6 +46,12 @@ namespace Rescaptepet.API.Controllers.V1
         public async Task<ActionResult<IEnumerable<Animale>>> GetAll()
         {
             return Ok(await _animalService.GetAllAsync());
+        }
+
+        [HttpGet("get-all-adoption")]
+        public async Task<ActionResult<IEnumerable<Animale>>> GetAllAdoption()
+        {
+            return Ok(await _animalService.GetAllByAdoption());
         }
     }
 }

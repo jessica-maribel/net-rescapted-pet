@@ -14,6 +14,6 @@ namespace Rescaptepet.Domain.Interfaces.Public
         Task<ReporteRescate> AddAsync(ReporteRescate reporteRescate);
         Task<ReporteRescate?> UpdateAsync(ReporteRescate reporteRescate);
         Task<ReporteRescate> ChangeStateAsync(ReporteRescate reporteRescate);
-        Task<ReporteRescate> GetByIdUserAsync(int idUser);
+        Task<IEnumerable<ReporteRescate>> GetByIdUserAsync(int idUser);
     }
 }

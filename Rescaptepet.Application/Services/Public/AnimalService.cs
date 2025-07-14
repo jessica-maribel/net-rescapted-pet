@@ -22,6 +22,11 @@ namespace Rescaptepet.Application.Services.Public
             return _animalRepository.GetAllAsync();
         }
 
+        public Task<IEnumerable<Animale>> GetAllByAdoption()
+        {
+            return _animalRepository.GetAllByAdoption();
+        }
+
         public Task<Animale?> GetByIdAsync(int id) =>
         _animalRepository.GetByIdAsync(id);
 

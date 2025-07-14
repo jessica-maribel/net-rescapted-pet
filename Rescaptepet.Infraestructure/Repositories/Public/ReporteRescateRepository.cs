@@ -57,9 +57,6 @@ namespace Rescaptepet.Infraestructure.Repositories.Public
             return existing;
         }
 
-        Task<ReporteRescate> IReporteRescateRepository.GetByIdUserAsync(int idUser)
-        {
-            throw new NotImplementedException();
-        }
+ 
     }
 }

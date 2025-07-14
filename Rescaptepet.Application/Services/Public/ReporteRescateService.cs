@@ -54,7 +54,7 @@ namespace Rescaptepet.Application.Services.Public
             return _reporteRescateRepository.GetByIdAsync(id);
         }
 
-        public Task<ReporteRescate> GetByIdUserAsync(int idUser)
+        public Task<IEnumerable<ReporteRescate>> GetByIdUserAsync(int idUser)
         {
             return _reporteRescateRepository.GetByIdUserAsync(idUser);
         }

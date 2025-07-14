@@ -9,5 +9,7 @@ namespace Rescaptepet.Application.Interfaces.Public
         Task<Animale> AddAsync(Animale animal);
         Task<Animale?> UpdateAsync(Animale animal);
         Task<bool> DeleteAsync(int id);
+        Task<IEnumerable<Animale>> GetAllByAdoption();
+
     }
 }

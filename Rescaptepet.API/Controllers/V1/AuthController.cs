@@ -20,9 +20,11 @@ namespace Rescaptepet.API.Controllers.V1
         [HttpPost("login")]
         public async Task<IActionResult> Login([FromBody] LoginDTO dto)
         {
+            Console.WriteLine("Entro al servicio .. ", dto);
             var user = await _authService.LoginAsync(dto);
             if (user == null)
                 return BadRequest("Correo o contrasela incorrectos");
+                Console.WriteLine("error ", dto);
             return Ok(user);    
         }
     }
