@@ -11,7 +11,7 @@ namespace Rescaptepet.Application.Services.Public
 
     public class ReporteRescateService(IHostingEnvironment _hostingEnvironment, IReporteRescateRepository _reporteRescateRepository) : IReporteRescateService
     {
-        public async Task<ReporteRescate> AddAsync(ReporteRescate reporteRescate, IFormFile formFile)
+        public async Task<ReporteRescate> AddAsync(ReporteRescate reporteRescate)
         {
             string baseUrl = "https://orca-app-pechy.ondigitalocean.app";
             string webRootPath = _hostingEnvironment.WebRootPath;
@@ -20,16 +20,16 @@ namespace Rescaptepet.Application.Services.Public
             if (!Directory.Exists(imagesPath))
                 Directory.CreateDirectory(imagesPath);
 
-            string extension = Path.GetExtension(formFile.FileName);
-            string fileName = $"{Guid.NewGuid()}{extension}";
-            string filePath = Path.Combine(imagesPath, fileName);
+            //string extension = Path.GetExtension(formFile.FileName);
+            //string fileName = $"{Guid.NewGuid()}{extension}";
+            //string filePath = Path.Combine(imagesPath, fileName);
 
-            using (var stream = new FileStream(filePath, FileMode.Create))
+            /*using (var stream = new FileStream(filePath, FileMode.Create))
             {
                 await formFile.CopyToAsync(stream);
-            }
+            }*/
 
-            reporteRescate.Foto = $"{baseUrl}/images/{fileName}";
+            reporteRescate.Foto = $"{baseUrl}/images/{reporteRescate.Foto}";
             reporteRescate.Fecha = DateTime.Now;
             reporteRescate.Estado = reporteRescate.Estado;
             reporteRescate.Activo = true;

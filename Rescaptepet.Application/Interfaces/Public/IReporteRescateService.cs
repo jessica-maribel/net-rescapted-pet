@@ -12,7 +12,7 @@ namespace Rescaptepet.Application.Interfaces.Public
     {
         Task<IEnumerable<ReporteRescate>> GetAllAsync();
         Task<ReporteRescate?> GetByIdAsync(int id);
-        Task<ReporteRescate> AddAsync(ReporteRescate reporteRescate, IFormFile formFile);
+        Task<ReporteRescate> AddAsync(ReporteRescate reporteRescate);
         Task<ReporteRescate?> UpdateAsync(ReporteRescate reporteRescate);
         Task<ReporteRescate> ChangeStateAsync(ReporteRescate reporteRescate);
         Task<IEnumerable<ReporteRescate>> GetByIdUserAsync(int idUser);

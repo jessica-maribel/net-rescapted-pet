@@ -11,12 +11,12 @@ namespace Rescaptepet.API.Controllers.V1
     {
 
         [HttpPost("create")]
-        public async Task<ActionResult<ReporteRescate>> CreateAsync([FromForm] ReporteRescate reporteRescate, IFormFile formFile)
+        public async Task<ActionResult<ReporteRescate>> CreateAsync(ReporteRescate reporteRescate)
         {
-            if (formFile == null || formFile.Length == 0)
-                return BadRequest("Se debe enviar un archivo.");
+            /*if (formFile == null || formFile.Length == 0)
+                return BadRequest("Se debe enviar un archivo.");*/
 
-            var created = await _reporteRescateService.AddAsync(reporteRescate, formFile);
+            var created = await _reporteRescateService.AddAsync(reporteRescate);
             return Ok(created);
         }
 
