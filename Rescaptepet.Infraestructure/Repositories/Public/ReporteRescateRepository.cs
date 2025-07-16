@@ -44,7 +44,8 @@ namespace Rescaptepet.Infraestructure.Repositories.Public
         {
             return await _context.ReporteRescates
                 .AsNoTracking()
-                .Where(r => r.IdUsuario == idUser)
+                .Where(r => r.IdUsuario == idUser && r.Activo == true)
+                .OrderByDescending(r => r.Id)
                 .ToListAsync();
         }
 

@@ -14,6 +14,7 @@ public class AnimalRepository(MySqlDbContext _context) : IAnimalRepository
             .Include(a => a.IdTipoAnimalNavigation)
             .Include(a => a.Adopciones)
             .Where(a => a.Activo == true)
+            .OrderByDescending(a => a.IdAnimal)
             .ToListAsync();
     }
 
@@ -59,6 +60,7 @@ public class AnimalRepository(MySqlDbContext _context) : IAnimalRepository
             .Include(a => a.IdTipoAnimalNavigation)
             .Include(a => a.Adopciones)
             .Where(a => a.Activo == true && a.EstadoAdopcion == "Disponible")
+            .OrderByDescending(r => r.IdAnimal)
             .ToListAsync();
     }
 }

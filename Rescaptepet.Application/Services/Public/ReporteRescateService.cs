@@ -20,22 +20,23 @@ namespace Rescaptepet.Application.Services.Public
             if (!Directory.Exists(imagesPath))
                 Directory.CreateDirectory(imagesPath);
 
-            //string extension = Path.GetExtension(formFile.FileName);
-            //string fileName = $"{Guid.NewGuid()}{extension}";
-            //string filePath = Path.Combine(imagesPath, fileName);
+            string fileName = $"{Guid.NewGuid()}.jpg";
+            string filePath = Path.Combine(imagesPath, fileName);
 
-            /*using (var stream = new FileStream(filePath, FileMode.Create))
-            {
-                await formFile.CopyToAsync(stream);
-            }*/
+            // Convertir base64 a byte[]
+            byte[] imageBytes = Convert.FromBase64String(reporteRescate.Foto);
 
-            reporteRescate.Foto = $"{baseUrl}/images/{reporteRescate.Foto}";
+            
+            await File.WriteAllBytesAsync(filePath, imageBytes);
+
+            
+            reporteRescate.Foto = $"{baseUrl}/images/{fileName}";
+
+            
             reporteRescate.Fecha = DateTime.Now;
-            reporteRescate.Estado = reporteRescate.Estado;
             reporteRescate.Activo = true;
 
             return await _reporteRescateRepository.AddAsync(reporteRescate);
-           
         }
 
 
